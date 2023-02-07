@@ -30,7 +30,9 @@ https://github.com/openai/whisper/
 
 ### 依赖
 apt update && sudo apt install ffmpeg
+
 pip install transformers>=4.19.0
+
 pip install ffmpeg-python==0.2.0
 
 ### 使用
