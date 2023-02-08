@@ -2,10 +2,10 @@
 ### whisper_ppg
 whisper ppg for voice change
 
-### 来源
+### From
 https://github.com/openai/whisper/
 
-### 模型列表
+### Models
 "tiny.en": "https://openaipublic.azureedge.net/main/whisper/models/d3dd57d32accea0b295c96e26691aa14d8822fac7d9d27d5dc00b4ca2826dd03/tiny.en.pt"
 
 "tiny": "https://openaipublic.azureedge.net/main/whisper/models/65147644a518d12f04e32d6f3b26facc3f8dd46e5390956a9424a650c0ce22b9/tiny.pt"
@@ -28,16 +28,21 @@ https://github.com/openai/whisper/
 
 "large": "https://openaipublic.azureedge.net/main/whisper/models/81f7c96c852ee8fc832187b0132e569d6c3065a3252ed18e56effd0b6a73e524/large-v2.pt"
 
-### 依赖
+### Depends
 apt update && sudo apt install ffmpeg
 
 pip install transformers>=4.19.0
 
 pip install ffmpeg-python==0.2.0
 
-### 使用
+### How to use
 python whisper_ppg_path.py -w waves/ -p ppg_out
 
-### 说明
+### Notes
+Whisper splits the audio in 30 seconds, so the audio should not exceed 30 seconds
+
 whisper以30秒切分音频，所以音频不要超过30秒
+
+Whisper's audio encoder output is ppg
+
 whisper的音频编码器输出为ppg
